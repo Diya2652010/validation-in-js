@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <p>Enter a number and click on "ok":</p>
+    <input id="id1" type="number" min="100" max="500" required>
+    <button onclick ="myFunction()">OK</button>
+        <p id="result"></p>
+        <script>
+            function myFunction(){
+                var inpOBJ=document.getElementById("id1");
+                if(!inpOBJ.checkValidity()){
+                    document.getElementById("result").innerHTML=inpOBJ.validationMessage;
+                }else{
+                    document.getElementById("result").innerHTML="input ok!!"
+                }
+            }
+        </script>
+</html>
